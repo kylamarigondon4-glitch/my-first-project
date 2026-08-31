@@ -2,16 +2,17 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>For My Pahinga 🫶</title>
+<title>Palagi - For Lawrence 🫶</title>
 <style>
 body{margin:0;background:#ffc2d1;min-height:100vh;display:flex;justify-content:center;align-items:center;font-family:Segoe UI,Arial;padding:15px}
-.card{background:white;max-width:420px;width:100%;border-radius:28px;padding:26px;box-shadow:0 15px 35px rgba(255,46,120,0.25);text-align:center}
+.card{background:white;max-width:430px;width:100%;border-radius:28px;padding:26px;box-shadow:0 15px 35px rgba(255,46,120,0.25);text-align:center}
 h1{color:#ff2e78;margin:5px 0}
 .date{background:linear-gradient(90deg,#ff2e78,#ff8fab);color:white;padding:10px;border-radius:50px;font-weight:bold;margin:12px 0}
 .message{text-align:left;background:#fff0f5;padding:18px;border-radius:18px;line-height:1.7;color:#444;font-size:15.5px}
-button{background:linear-gradient(90deg,#ff2e78,#ff8fab);border:none;color:white;padding:13px 22px;border-radius:50px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 5px 15px rgba(255,46,120,0.3);margin:8px 0;width:100%}
+button{background:linear-gradient(90deg,#ff2e78,#ff8fab);border:none;color:white;padding:13px 22px;border-radius:50px;font-size:15px;font-weight:bold;cursor:pointer;margin:8px 0;width:100%;box-shadow:0 5px 15px rgba(255,46,120,0.3)}
 .hidden{display:none}
-.box{margin-top:15px;padding:15px;border-radius:18px}
+.box{margin-top:15px;padding:15px;border-radius:18px;animation:pop 0.5s ease}
+@keyframes pop{0%{transform:scale(0.8);opacity:0}100%{transform:scale(1);opacity:1}}
 .c1{background:#ffe5ec;border:2px dashed #ff8fab}
 .c2{background:#e5f0ff;border:2px dashed #8fabff}
 .c3{background:#e5ffe5;border:2px dashed #8fdb8f}
@@ -19,42 +20,64 @@ button{background:linear-gradient(90deg,#ff2e78,#ff8fab);border:none;color:white
 .hearts{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none}
 .float{position:absolute;animation:float 3s linear forwards}
 @keyframes float{0%{transform:translateY(100vh);opacity:1}100%{transform:translateY(-10vh);opacity:0}}
-@keyframes pop{0%{transform:scale(0.8);opacity:0}100%{transform:scale(1);opacity:1}}
+#player{position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;opacity:0.01}
 </style>
 </head>
 <body>
 <div class="hearts" id="hearts"></div>
+
+<!-- PALAGI MUSIC PLAYER -->
+<div id="player"></div>
+
 <div class="card">
 <div style="font-size:60px">💖</div>
 <h1>Hi love!</h1>
-<p style="color:#888;margin:0;font-weight:bold">Lawrence</p>
-<div class="date">Happy 2nd Monthsary - Sept 2</div>
+<p style="color:#888;margin:0;font-weight:bold">Kyla Mae & Lawrence</p>
+<div class="date">Happy 2nd Monthsary - Sept 2 🎶 Palagi</div>
+
 <div class="message">
 Hi love, Happy 2nd Monthsary 🫶<br><br>
 I made this website for you hehe for practicing na din also haha, thankyou for being my comfort zone you always made my day brighter when I'm with you so thankful that i choose you i regret nothing, thankyou my pahinga take care palagi i love you so much!!🫶
 </div>
-<button id="btn1" onclick="step1()">Click here😚</button>
+
+<p style="font-size:12px;color:#ff8fab;margin:10px 0">🎵 Turn on volume - Palagi will play!</p>
+<button id="btn1" onclick="step1()">Click for thrill #1 + Palagi 👉😚🎵</button>
+
 <div id="s1" class="hidden box c1">
-<p><b> I love you my pahinga!</b><br>Thank you for making me the happiest!</p>
-<button onclick="step2()"> Ready for the other one? if yes, Click mo ulit hehe💓</button>
+<p><b>Ayieee my pahinga! 🎶 Palagi...</b><br>Ikaw lang palagi, Lawrence. Thank you for making me the happiest!</p>
+<button onclick="step2()">Thrill #2? Click mo ulit hehe 👉💓</button>
 </div>
 <div id="s2" class="hidden box c2">
-<p><b>Remember?</b><br>When I'm with you, my day becomes brighter. You are my pahinga.</p>
-<button onclick="step3()">May pangatlo pa haha! Dali! 👉🫣</button>
+<p><b>Palagi kitang pipiliin 🥺</b><br>When I'm with you, my day becomes brighter. You are my pahinga.</p>
+<button onclick="step3()">May #3 pa! Dali! 👉🫣</button>
 </div>
 <div id="s3" class="hidden box c3">
-<p><b>I regret nothing!</b><br>So thankful that I chose you. May pagpipilian man o wala, ikaw at ikaw lang palagi.</p>
-<button onclick="step4()">Last one, promise hehe love'u! 👉🔐</button>
+<p><b>I regret nothing! Palagi!</b><br>So thankful that I chose you. Ikaw at ikaw lang palagi. No doubts, just us.</p>
+<button onclick="step4()">Last one, promise! 👉🔐</button>
 </div>
 <div id="s4" class="hidden box c4">
 <p style="font-size:32px">💋❤️💋</p>
-<h2>I LOVE YOU SO MUCH!</h2>
-<p>Take care palagi, my love. Happy 2nd Monthsary!</p>
-<p style="font-size:28px">🫶💖</p>
-<button onclick="explode()" style="background:white;color:#ff2e78"> Sending hugs!💥💖</button>
+<h2>I LOVE YOU PALAGI!</h2>
+<p>Take care palagi, my love. Happy 2nd Monthsary to us! You are my always, my forever.</p>
+<p style="font-size:22px">🫶 Palagi, ikaw lang palagi 💖</p>
+<p style="font-size:12px;opacity:0.9">— Always yours, Kyla Mae</p>
+<button onclick="explode()" style="background:white;color:#ff2e78">Spam hearts while listening to Palagi! 💥💖</button>
 </div>
 </div>
+
 <script>
+// Load YouTube Player for Palagi - v82VtUUGFqk is official【4904493502969734846†L34-L36】
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+document.head.appendChild(tag);
+var player;
+function onYouTubeIframeAPIReady(){
+  player = new YT.Player('player', {
+    height: '1', width: '1',
+    videoId: 'v82VtUUGFqk',
+    playerVars: { 'playsinline': 1, 'loop':1, 'playlist':'v82VtUUGFqk' }
+  });
+}
 function heartsRain(n=20){
  for(let i=0;i<n;i++){
   setTimeout(()=>{
@@ -66,12 +89,16 @@ function heartsRain(n=20){
   }, i*80);
  }
 }
-function step1(){document.getElementById('s1').classList.remove('hidden');document.getElementById('btn1').style.display='none';heartsRain(15);}
+function step1(){
+ document.getElementById('s1').classList.remove('hidden');
+ document.getElementById('btn1').style.display='none';
+ heartsRain(20);
+ if(player && player.playVideo){ player.setVolume(80); player.playVideo(); }
+}
 function step2(){document.getElementById('s2').classList.remove('hidden');heartsRain(20);}
 function step3(){document.getElementById('s3').classList.remove('hidden');heartsRain(25);}
-function step4(){document.getElementById('s4').classList.remove('hidden');heartsRain(35);}
-function explode(){heartsRain(50);}
+function step4(){document.getElementById('s4').classList.remove('hidden');heartsRain(40);}
+function explode(){heartsRain(60);}
 </script>
 </body>
 </html>
-
