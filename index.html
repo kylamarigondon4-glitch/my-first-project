@@ -1,32 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>For Lawrence</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For My Pahinga 🫶</title>
 <style>
-body { background: #ffe6f0; text-align: center; font-family: Arial; padding: 20px; }
-.card { background: white; max-width: 600px; margin: auto; padding: 40px; border-radius: 20px; }
-h1 { color: #ff4d88; }
-.date { background: #ff4d88; color: white; padding: 15px; border-radius: 50px; }
-.reasons { background: #fff0f5; text-align: left; padding: 20px; border-radius: 15px; }
+body{margin:0;background:#ffc2d1;min-height:100vh;display:flex;justify-content:center;align-items:center;font-family:Segoe UI,Arial;padding:15px}
+.card{background:white;max-width:420px;width:100%;border-radius:28px;padding:26px;box-shadow:0 15px 35px rgba(255,46,120,0.25);text-align:center}
+h1{color:#ff2e78;margin:5px 0}
+.date{background:linear-gradient(90deg,#ff2e78,#ff8fab);color:white;padding:10px;border-radius:50px;font-weight:bold;margin:12px 0}
+.message{text-align:left;background:#fff0f5;padding:18px;border-radius:18px;line-height:1.7;color:#444;font-size:15.5px}
+button{background:linear-gradient(90deg,#ff2e78,#ff8fab);border:none;color:white;padding:13px 22px;border-radius:50px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 5px 15px rgba(255,46,120,0.3);margin:8px 0;width:100%;transition:0.2s}
+button:active{transform:scale(0.95)}
+.hidden{display:none}
+.box{margin-top:15px;padding:15px;border-radius:18px;animation:pop 0.5s}
+@keyframes pop{0%{transform:scale(0.8);opacity:0}100%{transform:scale(1);opacity:1}}
+.c1{background:#ffe5ec;border:2px dashed #ff8fab}
+.c2{background:#e5f0ff;border:2px dashed #8fabff}
+.c3{background:#e5ffe5;border:2px dashed #8fdb8f}
+.c4{background:linear-gradient(135deg,#ff2e78,#ff8fab);color:white}
+.hearts{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none}
+.float{position:absolute;animation:float 3s linear forwards}
+@keyframes float{0%{transform:translateY(100vh);opacity:1}100%{transform:translateY(-10vh);opacity:0}}
 </style>
 </head>
 <body>
+<div class="hearts" id="hearts"></div>
+
 <div class="card">
-<h1>💖 Happy 2nd Monthsary! 💖</h1>
-<h2>Kyla Mae & Lawrence</h2>
-<div class="date">September 2, 2026 - 2 Months of Love</div>
-<p>Hi my love, Lawrence!</p>
-<p>Two months ago, you came into my life and made everything more beautiful.</p>
-<div class="reasons">
-<h3>Why I Love You:</h3>
-<p>💕 You are so attentive</p>
-<p>💕 You are so caring</p>
-<p>💕 You are so loving</p>
-<p>💕 I love how you are - just you is perfect</p>
+<div style="font-size:60px">💖</div>
+<h1>Hi love!</h1>
+<p style="color:#888;margin:0;font-weight:bold">Kyla Mae & Lawrence</p>
+<div class="date">Happy 2nd Monthsary - Sept 2</div>
+
+<div class="message">
+Hi love, Happy 2nd Monthsary 🫶<br><br>
+I made this website for you hehe for practicing na din also haha, thankyou for being my comfort zone you always made my day brighter when I'm with you so thankful that i choose you i regret nothing, thankyou my pahinga take care palagi i love you so much!!🫶
 </div>
-<p>Thank you for 2 amazing months.<br>
-I love you so much, Lawrence!</p>
-<p>Love,<br><b>Kyla Mae</b></p>
+
+<!-- BUTTON 1 -->
+<button id="btn1" onclick="step1()">Click for thrill #1 👉😚</button>
+<div id="s1" class="hidden box c1">
+<p style="font-size:24px;margin:0">😘</p>
+<p><b>Ayieee my pahinga!</b><br>Thank you for making me the happiest! First 2 months pa lang, but feels like I found my forever comfort zone na.</p>
+<button onclick="step2()">Thrill #2? Click mo ulit hehe 👉💓</button>
 </div>
-</body>
-</html>
+
+<!-- BUTTON 2 -->
+<div id="s2" class="hidden box c2">
+<p style="font-size:24px;margin:0">🥺💖</p>
+<p><b>Remember?</b><br>When I'm with you, my day becomes brighter. You are literally my pahinga after a long day.</p>
+<button onclick="step3()">May #3 pa! Dali! 👉🫣</button>
+</div>
+
+<!-- BUTTON 3 -->
+<div id="s3" class="hidden box c3">
+<p style="font-size:24px;margin:0">🫶</p>
+<p><b>I regret nothing!</b><br>So thankful that I chose you. Ikaw at ikaw lang palagi. No doubts, just us.</p>
+<button onclick="step4()">Last one, promise! Click mo na! 👉🔐</button>
+</div>
+
+<!-- FINAL -->
+<div id="s4" class="hidden box c4">
+<p style="font-size:32px;margin:5px 0">💋❤️💋</p>
+<h2 style="margin:5px 0">I LOVE YOU SO MUCH!</h2>
+<p>Take care palagi, my love. I made this with all my love. Happy 2nd Monthsary to us! More months,
