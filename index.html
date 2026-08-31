@@ -9,11 +9,9 @@ body{margin:0;background:#ffc2d1;min-height:100vh;display:flex;justify-content:c
 h1{color:#ff2e78;margin:5px 0}
 .date{background:linear-gradient(90deg,#ff2e78,#ff8fab);color:white;padding:10px;border-radius:50px;font-weight:bold;margin:12px 0}
 .message{text-align:left;background:#fff0f5;padding:18px;border-radius:18px;line-height:1.7;color:#444;font-size:15.5px}
-button{background:linear-gradient(90deg,#ff2e78,#ff8fab);border:none;color:white;padding:13px 22px;border-radius:50px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 5px 15px rgba(255,46,120,0.3);margin:8px 0;width:100%;transition:0.2s}
-button:active{transform:scale(0.95)}
+button{background:linear-gradient(90deg,#ff2e78,#ff8fab);border:none;color:white;padding:13px 22px;border-radius:50px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 5px 15px rgba(255,46,120,0.3);margin:8px 0;width:100%}
 .hidden{display:none}
-.box{margin-top:15px;padding:15px;border-radius:18px;animation:pop 0.5s}
-@keyframes pop{0%{transform:scale(0.8);opacity:0}100%{transform:scale(1);opacity:1}}
+.box{margin-top:15px;padding:15px;border-radius:18px}
 .c1{background:#ffe5ec;border:2px dashed #ff8fab}
 .c2{background:#e5f0ff;border:2px dashed #8fabff}
 .c3{background:#e5ffe5;border:2px dashed #8fdb8f}
@@ -21,46 +19,60 @@ button:active{transform:scale(0.95)}
 .hearts{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none}
 .float{position:absolute;animation:float 3s linear forwards}
 @keyframes float{0%{transform:translateY(100vh);opacity:1}100%{transform:translateY(-10vh);opacity:0}}
+@keyframes pop{0%{transform:scale(0.8);opacity:0}100%{transform:scale(1);opacity:1}}
 </style>
 </head>
 <body>
 <div class="hearts" id="hearts"></div>
-
 <div class="card">
 <div style="font-size:60px">💖</div>
 <h1>Hi love!</h1>
 <p style="color:#888;margin:0;font-weight:bold">Kyla Mae & Lawrence</p>
 <div class="date">Happy 2nd Monthsary - Sept 2</div>
-
 <div class="message">
 Hi love, Happy 2nd Monthsary 🫶<br><br>
 I made this website for you hehe for practicing na din also haha, thankyou for being my comfort zone you always made my day brighter when I'm with you so thankful that i choose you i regret nothing, thankyou my pahinga take care palagi i love you so much!!🫶
 </div>
-
-<!-- BUTTON 1 -->
 <button id="btn1" onclick="step1()">Click for thrill #1 👉😚</button>
 <div id="s1" class="hidden box c1">
-<p style="font-size:24px;margin:0">😘</p>
-<p><b>Ayieee my pahinga!</b><br>Thank you for making me the happiest! First 2 months pa lang, but feels like I found my forever comfort zone na.</p>
+<p><b>Ayieee my pahinga!</b><br>Thank you for making me the happiest!</p>
 <button onclick="step2()">Thrill #2? Click mo ulit hehe 👉💓</button>
 </div>
-
-<!-- BUTTON 2 -->
 <div id="s2" class="hidden box c2">
-<p style="font-size:24px;margin:0">🥺💖</p>
-<p><b>Remember?</b><br>When I'm with you, my day becomes brighter. You are literally my pahinga after a long day.</p>
+<p><b>Remember?</b><br>When I'm with you, my day becomes brighter. You are my pahinga.</p>
 <button onclick="step3()">May #3 pa! Dali! 👉🫣</button>
 </div>
-
-<!-- BUTTON 3 -->
 <div id="s3" class="hidden box c3">
-<p style="font-size:24px;margin:0">🫶</p>
-<p><b>I regret nothing!</b><br>So thankful that I chose you. Ikaw at ikaw lang palagi. No doubts, just us.</p>
-<button onclick="step4()">Last one, promise! Click mo na! 👉🔐</button>
+<p><b>I regret nothing!</b><br>So thankful that I chose you. Ikaw at ikaw lang palagi.</p>
+<button onclick="step4()">Last one, promise! 👉🔐</button>
 </div>
-
-<!-- FINAL -->
 <div id="s4" class="hidden box c4">
-<p style="font-size:32px;margin:5px 0">💋❤️💋</p>
-<h2 style="margin:5px 0">I LOVE YOU SO MUCH!</h2>
-<p>Take care palagi, my love. I made this with all my love. Happy 2nd Monthsary to us! More months,
+<p style="font-size:32px">💋❤️💋</p>
+<h2>I LOVE YOU SO MUCH!</h2>
+<p>Take care palagi, my love. Happy 2nd Monthsary! More to come?</p>
+<p style="font-size:28px">🫶💖 forever?</p>
+<p>— Always yours, Kyla Mae</p>
+<button onclick="explode()" style="background:white;color:#ff2e78">Spam hearts! 💥💖</button>
+</div>
+</div>
+<script>
+function heartsRain(n=20){
+ for(let i=0;i<n;i++){
+  setTimeout(()=>{
+   let h=document.createElement('div');h.className='float';
+   h.innerHTML=['💖','💕','🫶','💋','❤️'][Math.floor(Math.random()*5)];
+   h.style.left=Math.random()*100+'vw';h.style.fontSize=(20+Math.random()*25)+'px';
+   document.getElementById('hearts').appendChild(h);
+   setTimeout(()=>h.remove(),3000);
+  }, i*80);
+ }
+}
+function step1(){document.getElementById('s1').classList.remove('hidden');document.getElementById('btn1').style.display='none';heartsRain(15);}
+function step2(){document.getElementById('s2').classList.remove('hidden');heartsRain(20);}
+function step3(){document.getElementById('s3').classList.remove('hidden');heartsRain(25);}
+function step4(){document.getElementById('s4').classList.remove('hidden');heartsRain(35);}
+function explode(){heartsRain(50);}
+</script>
+</body>
+</html>
+
